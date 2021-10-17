@@ -64,5 +64,16 @@ public class StringCalculatorShould {
 		}
     }
     
+    //test for number bigger than 1000
+    @Test
+    public void testOverThousand(){
+        StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(2, stringCalculator.add("1000,2"));
+    }
+
+    
+    
+    
+    
     
 }
