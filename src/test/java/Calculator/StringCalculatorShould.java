@@ -33,6 +33,15 @@ public class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
     	assertEquals(6, stringCalculator.add("1\n2,3"));
     }
+    
 
-        
+    @Test
+    public void testDifferntDelimiter(){
+    	
+    	//test for the differnt dilimiter
+        StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(3, stringCalculator.add("//;\n1;2"));
+    }
+    
+    
 }
