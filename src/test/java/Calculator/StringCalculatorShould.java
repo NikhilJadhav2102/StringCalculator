@@ -8,6 +8,8 @@ public class StringCalculatorShould {
 
     @Test
     public void empty_string_should_return_0() {
+    	
+    	//first test for the string numbers
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(0, stringCalculator.add(""));
     }
