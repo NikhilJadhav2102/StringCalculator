@@ -44,4 +44,25 @@ public class StringCalculatorShould {
     }
     
     
+    //test for the negative number
+    @Test
+    public void testNegativeNumver(){
+        StringCalculator stringCalculator = new StringCalculator();
+    	
+    	try {
+    		stringCalculator.add("-1,2");
+		}
+		catch (IllegalArgumentException e){
+			assertEquals(e.getMessage(), "Negatives not allowed: -1");
+		}
+
+		try {
+			stringCalculator.add("2,-4,3,-5");
+		}
+		catch (IllegalArgumentException e){
+			assertEquals(e.getMessage(), "Negatives not allowed: -4,-5");
+		}
+    }
+    
+    
 }
