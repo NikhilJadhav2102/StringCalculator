@@ -64,16 +64,18 @@ public class StringCalculatorShould {
 		}
     }
     
-    //test for number bigger than 1000
-    @Test
+      //test for number bigger than 1000
+      @Test
     public void testOverThousand(){
-        StringCalculator stringCalculator = new StringCalculator();
+       StringCalculator stringCalculator = new StringCalculator();
     	assertEquals(2, stringCalculator.add("1000,2"));
     }
-
+   
     
-    
-    
-    
+    @Test
+    public void test_multiple_delimiters(){
+   	StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(6, stringCalculator.add("//[*][%]\\n1*2%3"));
+   }
     
 }
